@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    android:background="@color/gray"
+    app:cardElevation="4dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/viewBackground"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_media"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/logo_72dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_publish_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/civ_media"
+            app:layout_constraintStart_toEndOf="@+id/civ_media"
+            app:layout_constraintTop_toTopOf="@+id/civ_media"
+            tools:ignore="RtlCompat"
+            tools:text="新闻源 - 2222条评论 - 1小时前"/>
+
+        <ImageView
+            android:id="@+id/iv_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_publish_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_publish_info"
+            app:srcCompat="@drawable/ic_dots_horizontal_grey500_24dp"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/civ_media"
+            tools:text="菲总统称中国将向菲提供武器 已指示军方前往接收 已指示军方前往接收"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_video_image"
+            android:layout_width="0dp"
+            android:layout_height="169dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:srcCompat="@drawable/girl"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            android:id="@+id/tv_video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="10:37"
+            android:background="@color/textColorPrimary"
+            android:padding="2dp"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_video_image"
+            app:layout_constraintEnd_toEndOf="@+id/iv_video_image"
+            tools:ignore="RtlCompat"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
